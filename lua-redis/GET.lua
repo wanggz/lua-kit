@@ -9,6 +9,9 @@ local positionId=ngx.var.arg_positionId
 
 local uri = ngx.var.request_uri
 
+--[====[
+redis get key : red:get(key)
+]====]
 function GetContent(redisIp,key)
     local redis = require "resty.redis"
     local red = redis:new()
